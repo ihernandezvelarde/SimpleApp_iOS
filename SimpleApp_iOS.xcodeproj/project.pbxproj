@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B12A15CD286456500036E69B /* MarvelCharactersLivView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A15CC286456500036E69B /* MarvelCharactersLivView.swift */; };
+		B12A15CF286494800036E69B /* DemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A15CE2864947F0036E69B /* DemoTableViewCell.swift */; };
 		B1C8CAE1286385DB00E1CD74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8CAE0286385DB00E1CD74 /* AppDelegate.swift */; };
 		B1C8CAE3286385DB00E1CD74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8CAE2286385DB00E1CD74 /* SceneDelegate.swift */; };
 		B1C8CAE5286385DB00E1CD74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8CAE4286385DB00E1CD74 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B12A15CC286456500036E69B /* MarvelCharactersLivView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharactersLivView.swift; sourceTree = "<group>"; };
+		B12A15CE2864947F0036E69B /* DemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewCell.swift; sourceTree = "<group>"; };
 		B1C8CADD286385DB00E1CD74 /* SimpleApp_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleApp_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C8CAE0286385DB00E1CD74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1C8CAE2286385DB00E1CD74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 			children = (
 				B1C8CAE4286385DB00E1CD74 /* ViewController.swift */,
 				B1C8CAE6286385DB00E1CD74 /* Main.storyboard */,
+				B12A15CE2864947F0036E69B /* DemoTableViewCell.swift */,
+				B12A15CC286456500036E69B /* MarvelCharactersLivView.swift */,
 				B1C8CAEE286385DD00E1CD74 /* Info.plist */,
 				B1C8CAF42863867000E1CD74 /* Supporting Files */,
 			);
@@ -147,7 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1C8CAE5286385DB00E1CD74 /* ViewController.swift in Sources */,
+				B12A15CD286456500036E69B /* MarvelCharactersLivView.swift in Sources */,
 				B1C8CAE1286385DB00E1CD74 /* AppDelegate.swift in Sources */,
+				B12A15CF286494800036E69B /* DemoTableViewCell.swift in Sources */,
 				B1C8CAE3286385DB00E1CD74 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

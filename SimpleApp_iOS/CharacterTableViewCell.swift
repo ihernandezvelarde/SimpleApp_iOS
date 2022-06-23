@@ -1,5 +1,5 @@
 //
-//  DemoTableViewCell.swift
+//  CharacterTableViewCell.swift
 //  SimpleApp_iOS
 //
 //  Created by Irene Hernández on 23/6/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DemoTableViewCell: UITableViewCell {
+class CharacterTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,5 +19,5 @@ class DemoTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

@@ -8,7 +8,21 @@
 import UIKit
 
 class CharacterTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet var characterNameLabel: UILabel!
+    @IBOutlet var characterAgeLabel: UILabel!
+    @IBOutlet var characterInfoLabel: UILabel!
+    
+    @IBOutlet var characterAttackLabel: UILabel!
+    @IBOutlet var characterHpLabel: UILabel!
+    @IBOutlet var characterDefenseLabel: UILabel!
+    
+    @IBOutlet var faceCharacterImage: UIImageView!
+    
+    @IBOutlet var attackImage: UIImageView!
+    @IBOutlet var hpImage: UIImageView!
+    @IBOutlet var defenseImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

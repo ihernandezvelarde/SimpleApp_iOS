@@ -25,6 +25,10 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     let attackCharacterList : [String] = ["150","140","140","250","500","510","400","390","1800","600","800","700"]
     let hpCharacterList: [String] = ["100","100","100","∞","300","300","250","240","∞","∞","∞","∞"]
     let defenseCharacterList: [String] = ["100","100","100","1000","600","600","500","490","10.000","1.500","1.100","1.100"]
+    let imageCharacterList:[UIImage?] = [UIImage(named: "tanjiro.png"),UIImage(named: "inosuke.png"),UIImage(named: "zenitsu.png"),UIImage(named: "nezuko.png"),UIImage(named: "tengen.png"),UIImage(named: "rengoku.png"),UIImage(named: "tomioka.png"),UIImage(named: "shinobu.png"),UIImage(named: "muzan.png"),UIImage(named: "akaza.png"),UIImage(named: "gyutaro.png"),UIImage(named: "daki.png")]
+    let imageOne = UIImage(named: "sword.png")
+    let imageTwo = UIImage(named: "life.png")
+    let imageThree = UIImage(named: "shield.png")
     
     public override var preferredStatusBarStyle: UIStatusBarStyle{
         .darkContent
@@ -42,17 +46,23 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         myTableView.register(nib, forCellReuseIdentifier: "CharacterTableViewCell")
         
         let cell = myTableView.dequeueReusableCell(withIdentifier: "CharacterTableViewCell", for: indexPath) as! CharacterTableViewCell
+        
+        myTableView.rowHeight = 105
         cell.characterNameLabel.text = charactersList[indexPath.row]
         cell.characterAgeLabel.text = ageCharacterList[indexPath.row]
         cell.characterInfoLabel.text = infoCharacterList[indexPath.row]
         cell.characterAttackLabel.text = attackCharacterList[indexPath.row]
         cell.characterHpLabel.text = hpCharacterList[indexPath.row]
         cell.characterDefenseLabel.text = defenseCharacterList[indexPath.row]
-        cell.faceCharacterImage.backgroundColor = .red
-        cell.attackImage.backgroundColor = .blue
-        cell.hpImage.backgroundColor = .blue
-        cell.defenseImage.backgroundColor = .blue
+        cell.faceCharacterImage.image = self.imageCharacterList[indexPath.row]
+        cell.attackImage.image = self.imageOne
+        cell.hpImage.image = self.imageTwo
+        cell.defenseImage.image = self.imageThree
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myTableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "showDetail", sender: self)
     }
     @IBAction func githubURL(_ sender: UIButton) {
         if let url = URL(string: "https://github.com/ihernandezvelarde") {

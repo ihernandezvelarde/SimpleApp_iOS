@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B173E347286B379E00BA71A7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B173E346286B379E00BA71A7 /* DetailViewController.swift */; };
 		B18A2B8F2864BC01006D9131 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18A2B8D2864BC00006D9131 /* CharacterTableViewCell.swift */; };
 		B18A2B902864BC01006D9131 /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B18A2B8E2864BC00006D9131 /* CharacterTableViewCell.xib */; };
 		B1C8CAE1286385DB00E1CD74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8CAE0286385DB00E1CD74 /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B173E346286B379E00BA71A7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B18A2B8D2864BC00006D9131 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 		B18A2B8E2864BC00006D9131 /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
 		B1C8CADD286385DB00E1CD74 /* SimpleApp_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleApp_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +66,7 @@
 				B1C8CAE6286385DB00E1CD74 /* Main.storyboard */,
 				B18A2B8D2864BC00006D9131 /* CharacterTableViewCell.swift */,
 				B18A2B8E2864BC00006D9131 /* CharacterTableViewCell.xib */,
+				B173E346286B379E00BA71A7 /* DetailViewController.swift */,
 				B1C8CAEE286385DD00E1CD74 /* Info.plist */,
 				B1C8CAF42863867000E1CD74 /* Supporting Files */,
 			);
@@ -155,6 +158,7 @@
 			files = (
 				B1C8CAE5286385DB00E1CD74 /* ViewController.swift in Sources */,
 				B1C8CAE1286385DB00E1CD74 /* AppDelegate.swift in Sources */,
+				B173E347286B379E00BA71A7 /* DetailViewController.swift in Sources */,
 				B1C8CAE3286385DB00E1CD74 /* SceneDelegate.swift in Sources */,
 				B18A2B8F2864BC01006D9131 /* CharacterTableViewCell.swift in Sources */,
 			);

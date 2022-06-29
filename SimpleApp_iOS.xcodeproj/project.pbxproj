@@ -64,14 +64,14 @@
 		B1C8CADF286385DB00E1CD74 /* SimpleApp_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B1C8CAE4286385DB00E1CD74 /* ViewController.swift */,
 				B1C8CAE6286385DB00E1CD74 /* Main.storyboard */,
+				B1C8CAE4286385DB00E1CD74 /* ViewController.swift */,
+				B1A12073286C58D3007DD62D /* CharacterModel.swift */,
 				B18A2B8D2864BC00006D9131 /* CharacterTableViewCell.swift */,
 				B18A2B8E2864BC00006D9131 /* CharacterTableViewCell.xib */,
 				B173E346286B379E00BA71A7 /* DetailViewController.swift */,
 				B1C8CAEE286385DD00E1CD74 /* Info.plist */,
 				B1C8CAF42863867000E1CD74 /* Supporting Files */,
-				B1A12073286C58D3007DD62D /* CharacterModel.swift */,
 			);
 			path = SimpleApp_iOS;
 			sourceTree = "<group>";

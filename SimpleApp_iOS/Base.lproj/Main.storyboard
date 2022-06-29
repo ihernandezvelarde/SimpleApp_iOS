@@ -93,9 +93,9 @@ EFRoaXMgaXMgYSBzaW1wbGUgYXBsaWNhdGlvbg
                             <constraint firstItem="7Jm-wz-r7a" firstAttribute="leading" secondItem="RI3-cD-NKM" secondAttribute="leading" constant="40" id="4Ux-Xn-8AF"/>
                             <constraint firstItem="K2U-xK-uLR" firstAttribute="centerX" secondItem="Jx8-b9-8Pa" secondAttribute="centerX" id="B4S-hT-h5O"/>
                             <constraint firstItem="RI3-cD-NKM" firstAttribute="trailing" secondItem="7Jm-wz-r7a" secondAttribute="trailing" constant="35" id="BhE-vS-xHq"/>
-                            <constraint firstItem="QfY-eJ-Ihk" firstAttribute="leading" secondItem="RI3-cD-NKM" secondAttribute="leading" constant="140" id="CZZ-PX-Lj0"/>
+                            <constraint firstItem="QfY-eJ-Ihk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RI3-cD-NKM" secondAttribute="leading" id="CZZ-PX-Lj0"/>
                             <constraint firstItem="RI3-cD-NKM" firstAttribute="trailing" secondItem="Bkz-7V-6yV" secondAttribute="trailing" constant="35" id="CgY-rF-3pK"/>
-                            <constraint firstItem="RI3-cD-NKM" firstAttribute="trailing" secondItem="QfY-eJ-Ihk" secondAttribute="trailing" constant="140" id="D0u-PT-F1f"/>
+                            <constraint firstItem="RI3-cD-NKM" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QfY-eJ-Ihk" secondAttribute="trailing" id="D0u-PT-F1f"/>
                             <constraint firstItem="9cJ-6L-f0A" firstAttribute="top" secondItem="RI3-cD-NKM" secondAttribute="top" constant="80" id="DGb-Zl-DTR"/>
                             <constraint firstItem="Duy-O8-t9N" firstAttribute="leading" secondItem="RI3-cD-NKM" secondAttribute="leading" constant="35" id="E2Y-Si-fBv"/>
                             <constraint firstItem="sqi-f5-Vxo" firstAttribute="centerX" secondItem="Jx8-b9-8Pa" secondAttribute="centerX" id="GFx-nl-ZSJ"/>
@@ -114,7 +114,7 @@ EFRoaXMgaXMgYSBzaW1wbGUgYXBsaWNhdGlvbg
                             <constraint firstItem="9cJ-6L-f0A" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RI3-cD-NKM" secondAttribute="leading" id="gFq-iV-5QW"/>
                             <constraint firstItem="RI3-cD-NKM" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JTF-9T-AD4" secondAttribute="trailing" id="giB-B7-Bby"/>
                             <constraint firstItem="Bkz-7V-6yV" firstAttribute="top" secondItem="Duy-O8-t9N" secondAttribute="bottom" constant="13" id="jgp-yt-lIC"/>
-                            <constraint firstItem="RI3-cD-NKM" firstAttribute="centerX" secondItem="QfY-eJ-Ihk" secondAttribute="trailing" priority="35" constant="159" id="kcp-sC-fTc"/>
+                            <constraint firstItem="RI3-cD-NKM" firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="QfY-eJ-Ihk" secondAttribute="trailing" priority="35" id="kcp-sC-fTc"/>
                             <constraint firstItem="K2U-xK-uLR" firstAttribute="top" secondItem="JTF-9T-AD4" secondAttribute="bottom" constant="19" id="ktf-Vg-1Wk"/>
                             <constraint firstItem="sqi-f5-Vxo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RI3-cD-NKM" secondAttribute="leading" id="l9O-6f-Wzr"/>
                             <constraint firstItem="QfY-eJ-Ihk" firstAttribute="centerX" secondItem="Jx8-b9-8Pa" secondAttribute="centerX" id="lxA-5U-4pf"/>
@@ -282,7 +282,7 @@ EFRoaXMgaXMgYSBzaW1wbGUgYXBsaWNhdGlvbg
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEF-3Z-5xC">
                                 <rect key="frame" x="135" y="646" width="120" height="41"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="Mw9-kG-4v8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Mw9-kG-4v8"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Wikipedia">
@@ -320,10 +320,10 @@ EFRoaXMgaXMgYSBzaW1wbGUgYXBsaWNhdGlvbg
                             <constraint firstItem="woP-KU-Odr" firstAttribute="top" secondItem="HNP-ip-1c8" secondAttribute="bottom" constant="12" id="fOp-BZ-ykb"/>
                             <constraint firstItem="oc5-k1-g2W" firstAttribute="trailing" secondItem="WhG-a9-WqW" secondAttribute="trailing" constant="35" id="fif-3u-835"/>
                             <constraint firstItem="WhG-a9-WqW" firstAttribute="top" secondItem="oc5-k1-g2W" secondAttribute="top" constant="35" id="gNH-Fe-53L"/>
-                            <constraint firstItem="oc5-k1-g2W" firstAttribute="trailing" secondItem="jEF-3Z-5xC" secondAttribute="trailing" constant="135" id="jRJ-FO-uNs"/>
+                            <constraint firstItem="oc5-k1-g2W" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jEF-3Z-5xC" secondAttribute="trailing" id="jRJ-FO-uNs"/>
                             <constraint firstItem="jEF-3Z-5xC" firstAttribute="centerX" secondItem="5SZ-Gu-O5a" secondAttribute="centerX" id="nhY-Wj-ZbX"/>
                             <constraint firstItem="WhG-a9-WqW" firstAttribute="leading" secondItem="oc5-k1-g2W" secondAttribute="leading" constant="35" id="v0F-cP-ZFP"/>
-                            <constraint firstItem="jEF-3Z-5xC" firstAttribute="leading" secondItem="oc5-k1-g2W" secondAttribute="leading" constant="135" id="vjt-e4-fKW"/>
+                            <constraint firstItem="jEF-3Z-5xC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oc5-k1-g2W" secondAttribute="leading" id="vjt-e4-fKW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="INFORMATION" leftItemsSupplementBackButton="YES" id="4ft-Rc-AhW" colorLabel="IBBuiltInLabel-Green">

@@ -8,8 +8,11 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    var characterNameText: String?
     
-    @IBOutlet var detailCharacterNameLabel: UILabel!
+    // MARK: - IBOutlets
+    @IBOutlet weak var detailCharacterNameLabel: UILabel!
+    
     @IBOutlet var detailCharacterAgeLabel: UILabel!
     @IBOutlet var detailCharacterInfoLabel: UILabel!
     
@@ -23,12 +26,22 @@ class DetailViewController: UIViewController {
     @IBOutlet var detailHpImage: UIImageView!
     @IBOutlet var detailDefenseImage: UIImageView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    // MARK: -View Lifecycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let characterNameText = characterNameText {
+            detailCharacterNameLabel.text = characterNameText
+        }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("__PRINT 2: \(characterNameText)")
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 
     /*
     // MARK: - Navigation

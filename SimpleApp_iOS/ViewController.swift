@@ -8,7 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
-   
+    
+    
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var titleAppCreator: UILabel!
     @IBOutlet weak var nameAppCreator: UILabel!
@@ -19,7 +20,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var fourthLineInfo: UILabel!
     @IBOutlet weak var fiveLineInfo: UILabel!
     
-    let charactersList: [String] = ["Tanjiro Kamado","Inosuke Hashibira","Zenitsu Agatsuma","Nezuko Kamado","Tengen Uzui","Kyojuro Rengoku","Giyu Tomioka","Shinoku Kocho","Muzan Kibutsuji","Akaza","Gyutaro","Daki"]
+    
+    var charactersList = ["Tanjiro Kamado","Inosuke Hashibira","Zenitsu Agatsuma","Nezuko Kamado","Tengen Uzui","Kyojuro Rengoku","Giyu Tomioka","Shinoku Kocho","Muzan Kibutsuji","Akaza","Gyutaro","Daki"]
     let ageCharacterList:[String] = ["16","15","16","14","23","20","21","18",">10.000",">133",">126",">126"]
     let infoCharacterList:[String] = ["Tanjiro Kamado is the protagonist of Demon Slayer: Kimetsu no Yaiba. He is a Demon Slayer in the Demon Slayer Corps, who joined to find a remedy to turn his sister, Nezuko Kamado, back into a human and to hunt down and kill demons.","Inosuke Hashibira is one of the main protagonists of Demon Slayer: Kimetsu no Yaiba and along with Zenitsu Agatsuma, a traveling companion of Tanjiro Kamado and Nezuko Kamado. He is also a Demon Slayer in the Demon Slayer Corps.","Zenitsu Agatsuma is one of the main protagonists of Demon Slayer: Kimetsu no Yaiba and along with Inosuke Hashibira, a travelling companion of Tanjiro Kamado and Nezuko Kamado. He is also a Demon Slayer in the Demon Slayer Corps.","Nezuko Kamado is the deuteragonist of Demon Slayer: Kimetsu no Yaiba. She is a demon and the younger sister of Tanjiro Kamado and one of the two remaining members of the Kamado family. Formerly a human, she was attacked and transformed into a demon by Muzan Kibutsuji.","Tengen Uzui is a major supporting character of Demon Slayer: Kimetsu no Yaiba and a major character in the Entertainment District Arc. He was a former member of the Demon Slayer Corps, standing as the previous Sound Hashira.","Kyojuro Rengoku was a major supporting character of Demon Slayer: Kimetsu no Yaiba and a major character in the Mugen Train Arc. He was a Demon Slayer of the Demon Slayer Corps and the late Flame Hashira.","Giyu Tomioka is a major supporting character of Demon Slayer: Kimetsu no Yaiba. He is a Demon Slayer of the Demon Slayer Corps and the current Water Hashira.","Shinobu Kocho  is a major supporting character of Demon Slayer: Kimetsu no Yaiba. She is a Demon Slayer of the Demon Slayer Corps and the current Insect Hashira.","Muzan Kibutsuji is the main antagonist of Demon Slayer: Kimetsu no Yaiba. He is the Demon King, the first of his kind, as well as the progenitor of all other demons in existence.Muzan is also the leader of the Twelve Kizuki, an organization of the twelve strongest demons in existence that serve directly under him.","Akaza is a major supporting antagonist of Demon Slayer: Kimetsu no Yaiba. He is a demon affiliated with the Twelve Kizuki, holding the position of Upper Rank Three. Over a century ago, Akaza was a human by the name of Hakuji, a prodigious martial artist who trained under Keizo while nursing his daughter, Koyuki,who would later become Akaza's fiancée.","Gyutaro was one of the primary antagonists in the Entertainment District Arc of Demon Slayer: Kimetsu no Yaiba. He was a demon affiliated with the Twelve Kizuki, holding the position of Upper Rank Six, a position he shares with his younger sister, Daki.","Daki was one of the primary antagonists in the Entertainment District Arc of Demon Slayer: Kimetsu no Yaiba. She was a demon affiliated with the Twelve Kizuki, being the secondary holder of the position of Upper Rank Six, a position she shared with the primary holder, her older brother, Gyutaro."]
     let attackCharacterList : [String] = ["150","140","140","250","500","510","400","390","1800","600","800","700"]
@@ -60,15 +62,37 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         cell.defenseImage.image = self.imageThree
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myTableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "showDetail", sender: self)
-    }
+    
     @IBAction func githubURL(_ sender: UIButton) {
         if let url = URL(string: "https://github.com/ihernandezvelarde") {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         } else {
             print("ERROR LOG: MainViewController button githubURL launch failed: safe link not found")
+        }
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: self)
+        //inicializar modelo 
+        myTableView.deselectRow(at: indexPath, animated: true)
+
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            if let indexPath = myTableView.indexPathForSelectedRow {
+                let destinationVC = segue.destination as? DetailViewController
+                destinationVC?.characterNameText = charactersList[indexPath.row]
+                print("__PRINT 1: \(String(describing: destinationVC?.characterNameText) )")
+            }
+            
+   
+   
+    
+    
+   
         }
     }
 }

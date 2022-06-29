@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
-    
+    var character = CharacterModel()
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var titleAppCreator: UILabel!
     @IBOutlet weak var nameAppCreator: UILabel!
@@ -76,7 +76,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showDetail", sender: self)
-        //inicializar modelo 
+        //inicializar modelo
         myTableView.deselectRow(at: indexPath, animated: true)
 
     }

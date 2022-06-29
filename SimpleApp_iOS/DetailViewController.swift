@@ -11,6 +11,8 @@ class DetailViewController: UIViewController {
     var characterNameText: String?
     
     // MARK: - IBOutlets
+    
+    @IBOutlet weak var wikipediaButton: UIButton!
     @IBOutlet weak var detailCharacterNameLabel: UILabel!
     
     @IBOutlet var detailCharacterAgeLabel: UILabel!
@@ -37,7 +39,6 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("__PRINT 2: \(characterNameText)")
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

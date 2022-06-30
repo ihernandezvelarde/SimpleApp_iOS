@@ -14,12 +14,13 @@ struct CharacterModel{
     var attack: Array<String> = []
     var hp: Array<String> = []
     var defense: Array<String> = []
-    var images: Array<UIImage> = []
-    var imageOne = UIImage(named: "sword.png")
-    var imageTwo = UIImage(named: "life.png")
-    var imageThree = UIImage(named: "shield.png")
+    var images: Array<String> = []
+    var imageOne : String = ""
+    var imageTwo : String = ""
+    var imageThree : String = ""
+    var wikipediaButton: Array<String> = []
     
-//    init(name: Array<String>, age: String, info: String, attack: String, hp: String, defense: String, imageOne: UIImage, imageTwo: UIImage, imageThree: UIImage) {
+//    init(name: Array<String>, age: Array<String>, info: Array<String>, attack: Array<String>, hp: Array<String>, defense: Array<String>,images: Array<String>, imageOne: String, imageTwo: String, imageThree: String) {
 //        self.name = []
 //        self.age = []
 //        self.info = []
@@ -27,10 +28,10 @@ struct CharacterModel{
 //        self.hp = []
 //        self.defense = []
 //        self.images = []
-//        self.imageOne = imageOne
-//        self.imageTwo = imageTwo
-//        self.imageThree = imageThree
+//        self.imageOne = ""
+//        self.imageTwo = ""
+//        self.imageThree = ""
 //    }
 }
-var character = CharacterModel ()
+
 

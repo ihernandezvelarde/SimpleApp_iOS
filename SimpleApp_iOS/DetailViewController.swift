@@ -8,8 +8,8 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    var characterNameText: String?
-    
+//    var characterNameText: String?
+//    var characterAgeText : String?
     // MARK: - IBOutlets
     
     @IBOutlet weak var wikipediaButton: UIButton!
@@ -32,14 +32,17 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let characterNameText = characterNameText {
-            detailCharacterNameLabel.text = characterNameText
-        }
+//        if let characterNameText = characterNameText {
+//            detailCharacterNameLabel.text = characterNameText
+//        }
+//        if let characterNameText = characterNameText {
+//            detailCharacterNameLabel.text = characterNameText
+//        }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

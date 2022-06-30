@@ -32,6 +32,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     let imageOne = "sword.png"
     let imageTwo = "life.png"
     let imageThree = "shield.png"
+    
     let wikiButton = ["https://kimetsu-no-yaiba.fandom.com/wiki/Tanjiro_Kamado", "https://kimetsu-no-yaiba.fandom.com/wiki/Inosuke_Hashibira", "https://kimetsu-no-yaiba.fandom.com/wiki/Zenitsu_Agatsuma", "https://kimetsu-no-yaiba.fandom.com/wiki/Nezuko_Kamado", "https://kimetsu-no-yaiba.fandom.com/wiki/Tengen_Uzui", "https://kimetsu-no-yaiba.fandom.com/wiki/Kyojuro_Rengoku", "https://kimetsu-no-yaiba.fandom.com/wiki/Giyu_Tomioka", "https://kimetsu-no-yaiba.fandom.com/wiki/Shinobu_Kocho", "https://kimetsu-no-yaiba.fandom.com/wiki/Muzan_Kibutsuji", "https://kimetsu-no-yaiba.fandom.com/wiki/Akaza", "https://kimetsu-no-yaiba.fandom.com/wiki/Gyutaro", "https://kimetsu-no-yaiba.fandom.com/wiki/Daki"]
     
     public override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -78,7 +79,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        character.name = charactersList
+        character.name = charactersList[indexPath.row]
         character.age = ageCharacterList
         character.info = infoCharacterList
         character.attack = attackCharacterList
@@ -99,16 +100,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         if segue.identifier == "showDetail" {
             if let indexPath = myTableView.indexPathForSelectedRow {
                 let destinationVC = segue.destination as? DetailViewController
-                destinationVC?.detailCharacterNameLabel?.text = character.name[indexPath.row]
-                //destinationVC?.characterNameText = character.name[indexPath.row]
-                
+                destinationVC?.character = character
             }
-            
-   
-   
-    
-    
-   
         }
     }
 }

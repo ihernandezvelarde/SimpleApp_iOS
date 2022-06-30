@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-//    var characterNameText: String?
+    var character: CharacterModel?
 //    var characterAgeText : String?
     // MARK: - IBOutlets
     
@@ -32,9 +32,9 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        if let characterNameText = characterNameText {
-//            detailCharacterNameLabel.text = characterNameText
-//        }
+        if let character = character {
+            detailCharacterNameLabel.text = character.name
+        }
 //        if let characterNameText = characterNameText {
 //            detailCharacterNameLabel.text = characterNameText
 //        }

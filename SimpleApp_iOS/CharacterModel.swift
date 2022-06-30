@@ -7,8 +7,8 @@
 
 import Foundation
 import UIKit
-struct CharacterModel{
-    var name: Array<String> = []
+struct CharacterModel {
+    var name: String = ""
     var age: Array<String> = []
     var info: Array<String> = []
     var attack: Array<String> = []

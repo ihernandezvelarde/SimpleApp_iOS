@@ -9,7 +9,6 @@ import UIKit
 
 class DetailViewController: UIViewController {
     var character: CharacterModel?
-//    var characterAgeText : String?
     // MARK: - IBOutlets
     
     @IBOutlet weak var wikipediaButton: UIButton!
@@ -29,16 +28,38 @@ class DetailViewController: UIViewController {
     @IBOutlet var detailDefenseImage: UIImageView!
     
     // MARK: -View Lifecycle
-    
+//    @IBAction func wikiURL(_ sender: UIButton) {
+//        if let character = character {
+//            if let url = URL(string: character.wikipediaButton) {
+//                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//            } else {
+//                print("ERROR LOG: MainViewController button githubURL launch failed: safe link not found")
+//            }
+//        }
+//    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let character = character {
             detailCharacterNameLabel.text = character.name
+            detailCharacterAgeLabel.text = character.age
+            detailCharacterInfoLabel.text = character.info
+            detailCharacterAttackLabel.text = character.attack
+            detailCharacterHpLabel.text = character.hp
+            detailCharacterDefenseLabel.text = character.defense
+            detailFaceCharacterImage.image = UIImage(named:character.faceImage)
+            detailAttackImage.image = UIImage(named:character.characterAttackIcon)
+            detailHpImage.image = UIImage(named:character.characterHpIcon)
+            detailDefenseImage.image = UIImage(named:character.characterDefenseIcon)
+            if wikipediaButton.isSelected {
+                if let url = URL(string: character.wikipediaButton) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                } else {
+                    print("ERROR LOG: DetailViewController button wikiURL launch failed: safe link not found")
+                }
+            }
         }
-//        if let characterNameText = characterNameText {
-//            detailCharacterNameLabel.text = characterNameText
-//        }
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

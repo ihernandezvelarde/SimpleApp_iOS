@@ -9,16 +9,16 @@ import Foundation
 import UIKit
 struct CharacterModel {
     var name: String = ""
-    var age: Array<String> = []
-    var info: Array<String> = []
-    var attack: Array<String> = []
-    var hp: Array<String> = []
-    var defense: Array<String> = []
-    var images: Array<String> = []
-    var imageOne : String = ""
-    var imageTwo : String = ""
-    var imageThree : String = ""
-    var wikipediaButton: Array<String> = []
+    var age: String = ""
+    var info: String = ""
+    var attack: String = ""
+    var hp: String = ""
+    var defense: String = ""
+    var faceImage: String = ""
+    var characterAttackIcon : String = ""
+    var characterHpIcon : String = ""
+    var characterDefenseIcon : String = ""
+    var wikipediaButton: String = ""
     
 //    init(name: Array<String>, age: Array<String>, info: Array<String>, attack: Array<String>, hp: Array<String>, defense: Array<String>,images: Array<String>, imageOne: String, imageTwo: String, imageThree: String) {
 //        self.name = []

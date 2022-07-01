@@ -42,6 +42,27 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        // ViewControllers view ist fully loaded and could present further ViewController
+        //Here you could do any other UI operations
+        if Reachability.isConnectedToNetwork() == true
+        {
+            print("Connected")
+        }
+        else
+        {
+            let controller = UIAlertController(title: "No Internet Detected", message: "This app requires an Internet connection", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+            controller.addAction(ok)
+            controller.addAction(cancel)
+
+            present(controller, animated: true, completion: nil)
+        }
+
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return charactersList.count
     }
@@ -112,6 +133,4 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         }
     }
 }
-extension UIButton{
-    
-}
+

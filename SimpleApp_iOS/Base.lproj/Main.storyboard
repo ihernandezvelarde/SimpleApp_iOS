@@ -212,13 +212,13 @@ EFRoaXMgaXMgYSBzaW1wbGUgYXBsaWNhdGlvbg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WhG-a9-WqW">
-                                <rect key="frame" x="35" y="79" width="320" height="265"/>
+                                <rect key="frame" x="35" y="95" width="320" height="265"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WhG-a9-WqW" secondAttribute="height" multiplier="1:1" constant="55" id="XJq-E4-VRB"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gW-Pj-db3">
-                                <rect key="frame" x="174.33333333333334" y="361" width="41.333333333333343" height="45"/>
+                                <rect key="frame" x="174.33333333333334" y="377" width="41.333333333333343" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -308,17 +308,31 @@ EFRoaXMgaXMgYSBzaW1wbGUgYXBsaWNhdGlvbg
                                     <action selector="wikiURL:" destination="u8I-le-GUt" eventType="touchUpInside" id="lJJ-3x-SWI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLB-lL-Iut">
+                                <rect key="frame" x="342" y="69" width="13" height="29"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="" subtitle="">
+                                    <imageReference key="image" image="xmark.circle" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cancelWithSender:" destination="u8I-le-GUt" eventType="touchUpInside" id="rOB-Kw-vNv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oc5-k1-g2W"/>
                         <color key="backgroundColor" red="0.96816951036453247" green="0.9456220269203186" blue="0.87908285856246948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cxZ-mn-6xH" firstAttribute="leading" secondItem="oc5-k1-g2W" secondAttribute="leading" constant="292" id="7OX-NA-5Om"/>
+                            <constraint firstItem="WhG-a9-WqW" firstAttribute="top" secondItem="LLB-lL-Iut" secondAttribute="bottom" constant="-3" id="7Rg-0F-sob"/>
+                            <constraint firstItem="LLB-lL-Iut" firstAttribute="leading" secondItem="oc5-k1-g2W" secondAttribute="leading" constant="342" id="94s-nb-1MA"/>
                             <constraint firstItem="oc5-k1-g2W" firstAttribute="trailing" secondItem="jEF-3Z-5xC" secondAttribute="trailing" constant="135" id="9IL-eR-rSs"/>
                             <constraint firstItem="cxZ-mn-6xH" firstAttribute="top" secondItem="qRF-mQ-pz8" secondAttribute="bottom" constant="6" id="A3c-yl-659"/>
                             <constraint firstItem="7CC-qH-0tW" firstAttribute="top" secondItem="3XJ-lw-dAF" secondAttribute="bottom" constant="6" id="APa-Oj-zJC"/>
                             <constraint firstItem="HNP-ip-1c8" firstAttribute="top" secondItem="kjI-uU-EgN" secondAttribute="bottom" constant="14" id="BzZ-Ah-dJy"/>
                             <constraint firstItem="3XJ-lw-dAF" firstAttribute="top" secondItem="kjI-uU-EgN" secondAttribute="bottom" constant="14" id="D21-WJ-1uQ"/>
                             <constraint firstItem="kjI-uU-EgN" firstAttribute="leading" secondItem="oc5-k1-g2W" secondAttribute="leading" constant="35" id="DtX-6g-fAY"/>
+                            <constraint firstItem="LLB-lL-Iut" firstAttribute="top" secondItem="oc5-k1-g2W" secondAttribute="top" constant="25" id="EVd-o0-KsL"/>
                             <constraint firstItem="51U-a7-5VO" firstAttribute="centerX" secondItem="5SZ-Gu-O5a" secondAttribute="centerX" id="FfW-Dq-KtF"/>
                             <constraint firstItem="woP-KU-Odr" firstAttribute="centerX" secondItem="HNP-ip-1c8" secondAttribute="centerX" id="Ffz-Vu-SiI"/>
                             <constraint firstItem="woP-KU-Odr" firstAttribute="top" secondItem="HNP-ip-1c8" secondAttribute="bottom" constant="6" id="HBf-W1-Fzv"/>
@@ -334,11 +348,12 @@ EFRoaXMgaXMgYSBzaW1wbGUgYXBsaWNhdGlvbg
                             <constraint firstItem="kjI-uU-EgN" firstAttribute="top" secondItem="51U-a7-5VO" secondAttribute="bottom" constant="9" id="cnd-kU-LGN"/>
                             <constraint firstItem="oc5-k1-g2W" firstAttribute="trailing" secondItem="WhG-a9-WqW" secondAttribute="trailing" constant="35" id="fif-3u-835"/>
                             <constraint firstItem="cxZ-mn-6xH" firstAttribute="centerX" secondItem="qRF-mQ-pz8" secondAttribute="centerX" id="gDW-i4-7aF"/>
-                            <constraint firstItem="WhG-a9-WqW" firstAttribute="top" secondItem="oc5-k1-g2W" secondAttribute="top" constant="35" id="gNH-Fe-53L"/>
+                            <constraint firstItem="WhG-a9-WqW" firstAttribute="top" secondItem="oc5-k1-g2W" secondAttribute="top" constant="51" id="gNH-Fe-53L"/>
                             <constraint firstItem="cxZ-mn-6xH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="woP-KU-Odr" secondAttribute="trailing" id="keD-Dh-ybN"/>
                             <constraint firstItem="7CC-qH-0tW" firstAttribute="centerX" secondItem="3XJ-lw-dAF" secondAttribute="centerX" id="lha-eC-jvu"/>
                             <constraint firstItem="woP-KU-Odr" firstAttribute="leading" secondItem="7CC-qH-0tW" secondAttribute="trailing" constant="67.333333333333343" id="nzy-nB-lkd"/>
                             <constraint firstItem="jEF-3Z-5xC" firstAttribute="top" secondItem="7CC-qH-0tW" secondAttribute="bottom" constant="21" id="omC-eH-bjc"/>
+                            <constraint firstItem="oc5-k1-g2W" firstAttribute="trailing" secondItem="LLB-lL-Iut" secondAttribute="trailing" constant="35" id="tNV-RK-6g2"/>
                             <constraint firstItem="jEF-3Z-5xC" firstAttribute="top" secondItem="cxZ-mn-6xH" secondAttribute="bottom" constant="21" id="tiK-CH-zAs"/>
                             <constraint firstItem="WhG-a9-WqW" firstAttribute="leading" secondItem="oc5-k1-g2W" secondAttribute="leading" constant="35" id="v0F-cP-ZFP"/>
                             <constraint firstItem="oc5-k1-g2W" firstAttribute="trailing" secondItem="kjI-uU-EgN" secondAttribute="trailing" constant="35" id="wOn-c0-G1S"/>
@@ -348,6 +363,7 @@ EFRoaXMgaXMgYSBzaW1wbGUgYXBsaWNhdGlvbg
                         <barButtonItem key="backBarButtonItem" title="Back" id="17g-SC-8ga"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="closeButton" destination="LLB-lL-Iut" id="zTT-3e-jkA"/>
                         <outlet property="detailAttackImage" destination="3XJ-lw-dAF" id="ghW-Mr-DjX"/>
                         <outlet property="detailCharacterAgeLabel" destination="51U-a7-5VO" id="tLZ-mR-bFn"/>
                         <outlet property="detailCharacterAttackLabel" destination="7CC-qH-0tW" id="lL4-e5-DVO"/>
@@ -429,6 +445,7 @@ EFRoaXMgaXMgYSBzaW1wbGUgYXBsaWNhdGlvbg
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="xmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

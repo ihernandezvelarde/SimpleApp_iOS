@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
-    
+
     var character = CharacterModel()
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var titleAppCreator: UILabel!
@@ -41,9 +41,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return charactersList.count
     }
@@ -104,8 +102,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         scrollView.bounces = scrollView.contentOffset.y > 100
         scrollView.bounces = scrollView.contentOffset.x > 100
     }
-    
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = myTableView.indexPathForSelectedRow {
@@ -114,4 +111,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
             }
         }
     }
+}
+extension UIButton{
+    
 }

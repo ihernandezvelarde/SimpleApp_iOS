@@ -10,7 +10,7 @@ import UIKit
 class DetailViewController: UIViewController {
     var character: CharacterModel?
     // MARK: - IBOutlets
-    
+    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var wikipediaButton: UIButton!
     @IBOutlet weak var detailCharacterNameLabel: UILabel!
     
@@ -54,6 +54,10 @@ class DetailViewController: UIViewController {
             }
         }
     }
+    @IBAction func cancel(sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,15 +66,4 @@ class DetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

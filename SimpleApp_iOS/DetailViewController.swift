@@ -28,15 +28,7 @@ class DetailViewController: UIViewController {
     @IBOutlet var detailDefenseImage: UIImageView!
     
     // MARK: -View Lifecycle
-//    @IBAction func wikiURL(_ sender: UIButton) {
-//        if let character = character {
-//            if let url = URL(string: character.wikipediaButton) {
-//                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-//            } else {
-//                print("ERROR LOG: MainViewController button githubURL launch failed: safe link not found")
-//            }
-//        }
-//    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let character = character {
@@ -50,18 +42,21 @@ class DetailViewController: UIViewController {
             detailAttackImage.image = UIImage(named:character.characterAttackIcon)
             detailHpImage.image = UIImage(named:character.characterHpIcon)
             detailDefenseImage.image = UIImage(named:character.characterDefenseIcon)
-            if wikipediaButton.isSelected {
-                if let url = URL(string: character.wikipediaButton) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                } else {
-                    print("ERROR LOG: DetailViewController button wikiURL launch failed: safe link not found")
-                }
+        }
+    }
+    
+    @IBAction func wikiURL(_ sender: UIButton) {
+        if let character = character {
+            if let url = URL(string: character.wikipediaButton) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                print("ERROR LOG: MainViewController button githubURL launch failed: safe link not found")
             }
         }
     }
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
    
     override func didReceiveMemoryWarning() {

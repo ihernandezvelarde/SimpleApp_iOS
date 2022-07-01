@@ -38,10 +38,12 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     public override var preferredStatusBarStyle: UIStatusBarStyle{
         .darkContent
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return charactersList.count
     }
@@ -98,6 +100,12 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         
 
     }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        scrollView.bounces = scrollView.contentOffset.y > 100
+        scrollView.bounces = scrollView.contentOffset.x > 100
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = myTableView.indexPathForSelectedRow {

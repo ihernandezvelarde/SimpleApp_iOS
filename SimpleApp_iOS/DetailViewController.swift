@@ -50,7 +50,7 @@ class DetailViewController: UIViewController {
             if let url = URL(string: character.wikipediaButton) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             } else {
-                print("ERROR LOG: MainViewController button githubURL launch failed: safe link not found")
+                print("ERROR LOG: DetailViewController button wikiURL launch failed: safe link not found")
             }
         }
     }

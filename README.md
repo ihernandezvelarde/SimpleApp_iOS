@@ -10,4 +10,4 @@ This is a simple application that contains [Kimetsu No Yaiba](https://es.wikiped
 
 * Here you can see the wire frame of the app:
 
-![Wire Frame](file:///Users/irenehernandez/Developer/SimpleApp_iOS/WireFrame/WireFrameApp.png)
+![Wire Frame]([file:///Users/irenehernandez/Developer/SimpleApp_iOS/WireFrame/WireFrameApp.png](https://github.com/ihernandezvelarde/SimpleApp_iOS/blob/main/WireFrame/WireFrameApp.png))

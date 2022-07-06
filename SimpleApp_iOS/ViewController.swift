@@ -46,21 +46,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     override func viewDidAppear(_ animated: Bool) {
         // ViewControllers view ist fully loaded and could present further ViewController
         //Here you could do any other UI operations
-        if Reachability.isConnectedToNetwork() == true
-        {
-            print("Connected")
-        }
-        else
-        {
-            let controller = UIAlertController(title: "No Internet Detected", message: "This app requires an Internet connection", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
-            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-
-            controller.addAction(ok)
-            controller.addAction(cancel)
-
-            present(controller, animated: true, completion: nil)
-        }
+        
 
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -89,11 +75,28 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     }
     
     @IBAction func githubURL(_ sender: UIButton) {
-        if let url = URL(string: "https://github.com/ihernandezvelarde") {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        } else {
-            print("ERROR LOG: MainViewController button githubURL launch failed: safe link not found")
+        
+        if Reachability.isConnectedToNetwork() == true
+        {
+            print("Connected")
+            if let url = URL(string: "https://github.com/ihernandezvelarde") {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                print("ERROR LOG: MainViewController button githubURL launch failed: safe link not found")
+            }
         }
+        else{
+            let controller = UIAlertController(title: "No Internet Detected", message: "This link requires an Internet connection", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            //let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+            controller.addAction(ok)
+            //controller.addAction(cancel)
+
+            present(controller, animated: true, completion: nil)
+        }
+        
+        
     }
  
     override func didReceiveMemoryWarning() {

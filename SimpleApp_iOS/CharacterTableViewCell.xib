@@ -19,6 +19,8 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q2q-4w-kGh">
                         <rect key="frame" x="20" y="20" width="75" height="75"/>
                         <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="4gQ-UF-5Lw"/>
+                            <constraint firstAttribute="height" constant="75" id="bwq-kc-bvw"/>
                             <constraint firstAttribute="width" secondItem="Q2q-4w-kGh" secondAttribute="height" multiplier="1:1" id="shD-sY-gRu"/>
                             <constraint firstAttribute="width" constant="75" id="yua-5a-hip"/>
                         </constraints>
@@ -56,7 +58,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="15" id="JnH-oK-AXn"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="O9B-XH-IGE"/>
                                             <constraint firstAttribute="width" secondItem="T4z-hX-pTe" secondAttribute="height" multiplier="1:1" id="Zcc-6f-zz5"/>
+                                            <constraint firstAttribute="height" constant="15" id="mN7-y1-3kx"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lx6-xa-0bi">
@@ -77,7 +81,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="dzK-k6-1D4" secondAttribute="height" multiplier="1:1" id="1Nm-Fq-yHS"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="ZCm-Uq-odz"/>
                                             <constraint firstAttribute="width" constant="15" id="aow-TT-W7M"/>
+                                            <constraint firstAttribute="height" constant="15" id="ozv-rE-3PM"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pft-IU-EUv">
@@ -98,6 +104,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Ct5-gT-a4o" secondAttribute="height" multiplier="1:1" id="3iB-yI-Orj"/>
+                                            <constraint firstAttribute="height" constant="15" id="JRB-ob-hT8"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="c8U-fQ-G4Z"/>
                                             <constraint firstAttribute="width" constant="15" id="mqa-hK-JyF"/>
                                         </constraints>
                                     </imageView>
@@ -123,11 +131,15 @@
                     <constraint firstItem="Vyb-T5-f3d" firstAttribute="leading" secondItem="Xpo-St-LjI" secondAttribute="trailing" constant="20" id="MOt-Ub-RN4"/>
                     <constraint firstItem="Q2q-4w-kGh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="N4e-Fz-93Q"/>
                     <constraint firstItem="Q2q-4w-kGh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="N5u-VD-L1a"/>
+                    <constraint firstItem="dzK-k6-1D4" firstAttribute="leading" secondItem="MIW-pG-Jca" secondAttribute="trailing" constant="20" id="QFe-hC-dw7"/>
                     <constraint firstItem="Xpo-St-LjI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="VER-IL-VIx"/>
+                    <constraint firstItem="wyL-Hd-HfF" firstAttribute="leading" secondItem="Q2q-4w-kGh" secondAttribute="trailing" constant="20" id="XAB-T8-1W8"/>
                     <constraint firstItem="Xpo-St-LjI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="d7s-mU-6NT"/>
                     <constraint firstItem="Q2q-4w-kGh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" symbolic="YES" id="jxO-3m-nAR"/>
                     <constraint firstItem="Fpg-qu-vki" firstAttribute="leading" secondItem="Q2q-4w-kGh" secondAttribute="trailing" constant="20" id="k7E-DE-alQ"/>
+                    <constraint firstItem="MIW-pG-Jca" firstAttribute="leading" secondItem="Q2q-4w-kGh" secondAttribute="trailing" constant="20" id="n7G-Zw-A63"/>
                     <constraint firstAttribute="bottom" secondItem="Xpo-St-LjI" secondAttribute="bottom" constant="20" id="tVF-jU-5c2"/>
+                    <constraint firstItem="T4z-hX-pTe" firstAttribute="leading" secondItem="wyL-Hd-HfF" secondAttribute="trailing" constant="20" id="uMV-YQ-fcR"/>
                     <constraint firstAttribute="trailing" secondItem="Vyb-T5-f3d" secondAttribute="trailing" priority="999" constant="20" id="vao-fY-L6z"/>
                 </constraints>
             </tableViewCellContentView>

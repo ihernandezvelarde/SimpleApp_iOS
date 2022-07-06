@@ -46,6 +46,8 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func wikiURL(_ sender: UIButton) {
+        if Reachability.isConnectedToNetwork() == true{
+            print("Connected")
         if let character = character {
             if let url = URL(string: character.wikipediaButton) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -53,7 +55,17 @@ class DetailViewController: UIViewController {
                 print("ERROR LOG: DetailViewController button wikiURL launch failed: safe link not found")
             }
         }
-    }
+        }else{
+            let controller = UIAlertController(title: "No Internet Detected", message: "This link requires an Internet connection", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            //let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+            controller.addAction(ok)
+            //controller.addAction(cancel)
+
+            present(controller, animated: true, completion: nil)
+        }
+        }
     @IBAction func cancel(sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
